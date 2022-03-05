@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let userChoice;
   let computerChoice;
+  let result;
 
   possibleChoices.forEach((possibleChoices) =>
     possibleChoices.addEventListener("click", (e) => {
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       userChoiceDisplay.innerHTML = userChoice;
 
       generateComputerChoiceDisplay();
+      getResult();
     })
   );
 
@@ -32,5 +34,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     computerChoiceDisplay.innerHTML = computerChoice;
+  }
+
+  function getResult() {
+    if (computerChoice === userChoice) {
+      result = "Remis !";
+    }
+    if (computerChoice === "rock" && userChoice === "paper") {
+      result = "Wygrałeś !";
+    }
+    if (computerChoice === "rock" && userChoice === "scissors") {
+      result = "Przegrałeś !";
+    }
+    if (computerChoice === "paper" && userChoice === "rock") {
+      result = "Przegrałeś !";
+    }
+    if (computerChoice === "paper" && userChoice === "scissors") {
+      result = "Wygrałeś !";
+    }
+    if (computerChoice === "scissors" && userChoice === "rock") {
+      result = "Wygrałeś !";
+    }
+    if (computerChoice === "scissors" && userChoice === "paper") {
+      result = "Przegrałeś!";
+    }
+
+    resultDisplay.innerHTML = result;
   }
 });
