@@ -1,0 +1,35 @@
+body {
+  margin: 0 auto;
+  background: #7a87c9;
+}
+
+.wrapper {
+  background: #7a87c9;
+}
+
+h2 {
+  margin: 35px;
+}
+
+span {
+    text-transform: uppercase;
+  margin: 15px;
+}
+
+button {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-style: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 20px;
+}
+
+button:hover {
+  border: 2px solid rgb(129, 129, 129);
+  background: #9c99e9;
+}
