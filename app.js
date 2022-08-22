@@ -4,16 +4,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const computerChoiceDisplay = document.getElementById("computer-choice");
   const userChoiceDisplay = document.getElementById("user-choise");
   const resultDisplay = document.getElementById("game-result");
+
   const possibleChoices = document.querySelectorAll("button");
+
+  const userScoreDisplay = document.getElementById("user-score");
+  const computerScoreDisplay = document.getElementById("computer-score");
+  const drawDisplay = document.getElementById("draw");
+  const roundNumberDisplay = document.getElementById("round");
 
   let userChoice;
   let computerChoice;
   let result;
+  let userScore = 0;
+  let computerScore = 0;
+  let draw = 0;
+  let clickCounter = 0;
 
   possibleChoices.forEach((possibleChoices) =>
     possibleChoices.addEventListener("click", (e) => {
       userChoice = e.target.id;
       userChoiceDisplay.innerHTML = userChoice;
+
+      clickCounter += 1;
+      console.log(clickCounter);
 
       generateComputerChoiceDisplay();
       getResult();
@@ -39,26 +52,37 @@ document.addEventListener("DOMContentLoaded", () => {
   function getResult() {
     if (computerChoice === userChoice) {
       result = "Remis !";
+      draw += 1;
     }
     if (computerChoice === "rock" && userChoice === "paper") {
       result = "Wygrałeś !";
+      userScore += 1;
     }
     if (computerChoice === "rock" && userChoice === "scissors") {
       result = "Przegrałeś !";
+      computerScore += 1;
     }
     if (computerChoice === "paper" && userChoice === "rock") {
       result = "Przegrałeś !";
+      computerScore += 1;
     }
     if (computerChoice === "paper" && userChoice === "scissors") {
       result = "Wygrałeś !";
+      userScore += 1;
     }
     if (computerChoice === "scissors" && userChoice === "rock") {
       result = "Wygrałeś !";
+      userScore += 1;
     }
     if (computerChoice === "scissors" && userChoice === "paper") {
       result = "Przegrałeś!";
+      computerScore += 1;
     }
 
     resultDisplay.innerHTML = result;
+    userScoreDisplay.innerHTML = userScore;
+    computerScoreDisplay.innerHTML = computerScore;
+    drawDisplay.innerHTML = draw;
+    roundNumberDisplay.innerHTML = clickCounter;
   }
 });

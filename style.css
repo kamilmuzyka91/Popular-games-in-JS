@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   background: #7a87c9;
 }
@@ -12,7 +15,7 @@ h2 {
 }
 
 span {
-    text-transform: uppercase;
+  text-transform: uppercase;
   margin: 15px;
 }
 
