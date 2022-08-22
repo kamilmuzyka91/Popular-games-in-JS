@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   computerChoiceDisplay.innerText = "************";
   userChoiceDisplay.innerText = "************";
   resultDisplay.innerText = "************";
-
   userScoreDisplay.innerText = "0";
   computerScoreDisplay.innerText = "0";
   drawDisplay.innerText = "0";

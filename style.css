@@ -9,6 +9,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url("./background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -24,7 +28,21 @@ body {
   display: inline-flex;
 }
 
-h2,
-p {
-  margin: 50px;
+.box {
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  margin: 20px;
+  border: 1px solid #000;
 }
+
+h2 {
+  margin: 15px 0;
+}
+
+div.p {
+  background: red;
+}
+
+/* <button id="paper">Paper</button> 
+A gdyby tak zamiast btn podstawic span z grafiką ::after / ::before ?  */
