@@ -20,13 +20,22 @@ document.addEventListener("DOMContentLoaded", () => {
   let draw = 0;
   let clickCounter = 0;
 
+  // placeholder list
+  computerChoiceDisplay.innerText = "************";
+  userChoiceDisplay.innerText = "************";
+  resultDisplay.innerText = "************";
+
+  userScoreDisplay.innerText = "0";
+  computerScoreDisplay.innerText = "0";
+  drawDisplay.innerText = "0";
+  roundNumberDisplay.innerText = "0";
+
   possibleChoices.forEach((possibleChoices) =>
     possibleChoices.addEventListener("click", (e) => {
       userChoice = e.target.id;
       userChoiceDisplay.innerHTML = userChoice;
 
       clickCounter += 1;
-      console.log(clickCounter);
 
       generateComputerChoiceDisplay();
       getResult();

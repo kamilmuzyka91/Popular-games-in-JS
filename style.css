@@ -1,38 +1,30 @@
+@import "./reset.css";
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  background: #7a87c9;
+  height: 100vh;
 }
 
 .wrapper {
-  background: #7a87c9;
+  display: flex;
+  flex-direction: column;
 }
 
-h2 {
-  margin: 35px;
+.game {
+  display: inline-flex;
 }
 
-span {
-  text-transform: uppercase;
-  margin: 15px;
+.game__result {
+  display: inline-flex;
 }
 
-button {
-  color: #fff;
-  font-size: 16px;
-  letter-spacing: 1.3px;
-  text-transform: uppercase;
-  background-color: transparent;
-  border-style: none;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  padding: 10px 15px;
-  margin: 20px;
-}
-
-button:hover {
-  border: 2px solid rgb(129, 129, 129);
-  background: #9c99e9;
+h2,
+p {
+  margin: 50px;
 }
