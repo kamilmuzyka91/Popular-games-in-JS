@@ -1,4 +1,6 @@
 @import "./reset.css";
+@import "./variables.css";
+@import "../fonts/fonts.css";
 
 * {
   box-sizing: border-box;
@@ -13,6 +15,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  font-family: "robotoregular";
 }
 
 .wrapper {
@@ -21,7 +24,10 @@ body {
   justify-content: center;
   width: 60vw;
   height: auto;
-  border: 2px solid greenyellow;
+  border: 4px solid var(--primary-color);
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 9px 1px rgb(173 255 47);
 }
 
 .game__result {
@@ -39,12 +45,45 @@ body {
   text-align: center;
 }
 
-h2 {
+.box__title {
   font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 3.2px;
   margin: 15px 0;
+  color: var(--secondary-color);
+}
+
+.box__result {
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+
+button {
+  margin: 1em 2em;
+  font-size: 3.5em;
 }
 
 .btn {
-  padding: 1em 1em;
-  margin: 0 2em;
+  background: none;
+  border: none;
+  cursor: crosshair;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.btn--1::after {
+  content: "\f255";
+  font-family: "Font Awesome 5 Free";
+}
+
+.btn--2::after {
+  content: "\f256";
+  font-family: "Font Awesome 5 Free";
+  color: var(--secondary-color);
+}
+
+.btn--3::after {
+  content: "\f257";
+  font-family: "Font Awesome 5 Free";
+  color: var(--secondary-color);
 }
