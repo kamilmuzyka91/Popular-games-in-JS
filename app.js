@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded and parsed");
 
   const computerChoiceDisplay = document.getElementById("computer-choice");
-  const userChoiceDisplay = document.getElementById("user-choise");
+  const userChoiceDisplay = document.getElementById("user-choice");
   const resultDisplay = document.getElementById("game-result");
 
   const possibleChoices = document.querySelectorAll("button");
