@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url("./background.jpg");
+  background-image: url("../images/rock-paper.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,31 +18,33 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-}
-
-.game {
-  display: inline-flex;
+  justify-content: center;
+  width: 60vw;
+  height: auto;
+  border: 2px solid greenyellow;
 }
 
 .game__result {
   display: inline-flex;
+  justify-content: space-evenly;
+}
+
+.game__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
 }
 
 .box {
   text-align: center;
-  width: 180px;
-  height: 180px;
-  margin: 20px;
-  border: 1px solid #000;
 }
 
 h2 {
+  font-size: 1.5em;
   margin: 15px 0;
 }
 
-div.p {
-  background: red;
+.btn {
+  padding: 1em 1em;
+  margin: 0 2em;
 }
-
-/* <button id="paper">Paper</button> 
-A gdyby tak zamiast btn podstawic span z grafiką ::after / ::before ?  */
