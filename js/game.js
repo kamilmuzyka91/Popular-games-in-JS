@@ -90,6 +90,8 @@ function getResult() {
   drawDisplay.innerHTML = draw;
   roundNumberDisplay.innerHTML = clickCounter;
 
+  // obsłiuga po zakończeniu gry
+
   // tutaj niżej obsłużymy pojawienie się 'modal' informującego o wyniku
   // z pytaniem czy gramy raz jeszcze, jeżeli tak to gramy jeszcze raz...
   // jeżeli nie to czyścimy localStorage
@@ -106,12 +108,25 @@ function getResult() {
       console.log("wygrałeś");
       wrapper.style = "display:none";
       modal.style = "display:block";
-      modal.innerText = "Wygrałeś !";
+
+      // modal.innerText = "Wygrałeś !";
+      const showName = localStorage.getItem("name");
+      const newTitle = document.createElement("h1");
+
+      newTitle.innerText = `${showName} wygrałeś !`;
+      newTitle.style.textTransform = "capitalize";
+      modal.firstElementChild.appendChild(newTitle);
     } else if (clickCounter >= 5 && computerScore > userScore) {
       console.log("przegrałeś");
       wrapper.style = "display:none";
       modal.style = "display:block";
-      modal.innerText = "Przegrałeś !";
+      // modal.innerText = "Przegrałeś !";
+      const showName = localStorage.getItem("name");
+      const newTitle = document.createElement("h1");
+
+      newTitle.innerText = `${showName} wygrałeś !`;
+      newTitle.style.textTransform = "capitalize";
+      modal.firstElementChild.appendChild(newTitle);
     }
   }
 }

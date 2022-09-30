@@ -18,7 +18,7 @@
 }
 
 .wrapper {
-  display: flex;
+  display: flex; /* zmień na flex po zakończeniu obsługi modal'a*/
   flex-direction: column;
   justify-content: center;
   width: 60vw;

@@ -11,6 +11,7 @@ button.addEventListener("click", (e) => {
 
   saveNamToLocalStorage();
   window.open("game.html");
+  window.close();
 });
 
 function saveNamToLocalStorage() {

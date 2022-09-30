@@ -1,7 +1,7 @@
 @import "./app.css";
 
 .modal {
-  display: none;
+  display: none; /* zmień na none */
   width: 60vw;
   height: auto;
   border: 4px solid var(--primary-color);
@@ -11,4 +11,28 @@
   font-size: 42px;
   color: #bada66;
   text-align: center;
+}
+
+.btn-primary {
+  background: #15d798;
+  border-radius: 11px;
+  padding: 20px 45px;
+  color: #ffffff;
+  display: inline-block;
+  font: normal bold 20px/1 "Open Sans", sans-serif;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-warning {
+  background: #ec105d;
+  border-radius: 11px;
+  padding: 20px 45px;
+  color: #ffffff;
+  display: inline-block;
+  font: normal bold 20px/1 "Open Sans", sans-serif;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
 }
