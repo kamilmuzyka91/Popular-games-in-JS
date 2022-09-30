@@ -10,7 +10,7 @@ button.addEventListener("click", (e) => {
   newName = userId.value;
 
   saveNamToLocalStorage();
-  window.open("index.html");
+  window.open("game.html");
 });
 
 function saveNamToLocalStorage() {

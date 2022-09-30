@@ -35,10 +35,6 @@ possibleChoices.forEach((possibleChoices) =>
 
     generateComputerChoiceDisplay();
     getResult();
-
-    if (clickCounter >= 10) {
-      removeEventListener("click", possibleChoices);
-    }
   })
 );
 
@@ -59,12 +55,6 @@ function generateComputerChoiceDisplay() {
 }
 
 function getResult() {
-  resultDisplay.innerHTML = result;
-  userScoreDisplay.innerHTML = userScore;
-  computerScoreDisplay.innerHTML = computerScore;
-  drawDisplay.innerHTML = draw;
-  roundNumberDisplay.innerHTML = clickCounter;
-
   if (computerChoice === userChoice) {
     result = "Remis !";
     draw += 1;
@@ -92,6 +82,18 @@ function getResult() {
   if (computerChoice === "scissors" && userChoice === "paper") {
     result = "Przegrałeś!";
     computerScore += 1;
+  }
+
+  resultDisplay.innerHTML = result;
+  userScoreDisplay.innerHTML = userScore;
+  computerScoreDisplay.innerHTML = computerScore;
+  drawDisplay.innerHTML = draw;
+  roundNumberDisplay.innerHTML = clickCounter;
+
+  if (clickCounter >= 5 && userScore > computerScore) {
+    console.log("wygrałeś");
+  } else if (clickCounter >= 5 && computerScore > userScore) {
+    console.log("przegrałeś");
   }
 }
 
