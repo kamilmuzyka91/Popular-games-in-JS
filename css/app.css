@@ -1,3 +1,4 @@
 @import "./settings/reset.css";
 @import "./settings/variables.css";
 @import "../fonts/fonts.css";
+@import "./modal.css";

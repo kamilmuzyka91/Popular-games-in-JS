@@ -90,10 +90,29 @@ function getResult() {
   drawDisplay.innerHTML = draw;
   roundNumberDisplay.innerHTML = clickCounter;
 
-  if (clickCounter >= 5 && userScore > computerScore) {
-    console.log("wygrałeś");
-  } else if (clickCounter >= 5 && computerScore > userScore) {
-    console.log("przegrałeś");
+  // tutaj niżej obsłużymy pojawienie się 'modal' informującego o wyniku
+  // z pytaniem czy gramy raz jeszcze, jeżeli tak to gramy jeszcze raz...
+  // jeżeli nie to czyścimy localStorage
+
+  if (clickCounter >= 5) {
+    showResult();
+  }
+
+  function showResult() {
+    const wrapper = document.querySelector(".wrapper");
+    const modal = document.querySelector(".modal");
+
+    if (clickCounter >= 5 && userScore > computerScore) {
+      console.log("wygrałeś");
+      wrapper.style = "display:none";
+      modal.style = "display:block";
+      modal.innerText = "Wygrałeś !";
+    } else if (clickCounter >= 5 && computerScore > userScore) {
+      console.log("przegrałeś");
+      wrapper.style = "display:none";
+      modal.style = "display:block";
+      modal.innerText = "Przegrałeś !";
+    }
   }
 }
 
