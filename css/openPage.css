@@ -1,0 +1,8 @@
+@import "./reset.css";
+@import "./variables.css";
+@import "../fonts/fonts.css";
+
+body {
+  font-family: "robotoregular";
+  color: var(--primary-color);
+}
