@@ -17,6 +17,7 @@
   background: #15d798;
   border-radius: 11px;
   padding: 20px 45px;
+  margin: 1.2em;
   color: #ffffff;
   display: inline-block;
   font: normal bold 20px/1 "Open Sans", sans-serif;
@@ -29,10 +30,15 @@
   background: #ec105d;
   border-radius: 11px;
   padding: 20px 45px;
+  margin: 1.2em;
   color: #ffffff;
   display: inline-block;
   font: normal bold 20px/1 "Open Sans", sans-serif;
   text-align: center;
   cursor: pointer;
   outline: none;
+}
+
+.modal__ask {
+  padding: 1.5em;
 }

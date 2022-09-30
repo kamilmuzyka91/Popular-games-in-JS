@@ -90,7 +90,7 @@ function getResult() {
   drawDisplay.innerHTML = draw;
   roundNumberDisplay.innerHTML = clickCounter;
 
-  // obsłiuga po zakończeniu gry
+  // end game support
 
   // tutaj niżej obsłużymy pojawienie się 'modal' informującego o wyniku
   // z pytaniem czy gramy raz jeszcze, jeżeli tak to gramy jeszcze raz...
@@ -105,33 +105,32 @@ function getResult() {
     const modal = document.querySelector(".modal");
 
     if (clickCounter >= 5 && userScore > computerScore) {
-      console.log("wygrałeś");
       wrapper.style = "display:none";
       modal.style = "display:block";
 
-      // modal.innerText = "Wygrałeś !";
       const showName = localStorage.getItem("name");
       const newTitle = document.createElement("h1");
 
       newTitle.innerText = `${showName} wygrałeś !`;
       newTitle.style.textTransform = "capitalize";
-      modal.firstElementChild.appendChild(newTitle);
+      newTitle.style.margin = "20px";
+      modal.appendChild(newTitle);
     } else if (clickCounter >= 5 && computerScore > userScore) {
-      console.log("przegrałeś");
       wrapper.style = "display:none";
       modal.style = "display:block";
-      // modal.innerText = "Przegrałeś !";
       const showName = localStorage.getItem("name");
       const newTitle = document.createElement("h1");
 
-      newTitle.innerText = `${showName} wygrałeś !`;
+      newTitle.innerText = `${showName} przegrałeś !`;
       newTitle.style.textTransform = "capitalize";
-      modal.firstElementChild.appendChild(newTitle);
+      newTitle.style.color = "#ec105d";
+      newTitle.style.margin = "20px";
+      modal.appendChild(newTitle); // dodaj dynamicznie klasę w JS zamiast stylować w kodzie JS
     }
   }
 }
 
-// get name from local storage
+// get and set name from local storage
 
 if (localStorage.getItem("name") != null) {
   const userName = localStorage.getItem("name");
