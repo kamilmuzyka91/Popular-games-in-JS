@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   computerChoiceDisplay.innerText = "************";
   userChoiceDisplay.innerText = "************";
   resultDisplay.innerText = "************";
+
   userScoreDisplay.innerText = "0";
   computerScoreDisplay.innerText = "0";
   drawDisplay.innerText = "0";
@@ -92,5 +93,43 @@ document.addEventListener("DOMContentLoaded", () => {
     computerScoreDisplay.innerHTML = computerScore;
     drawDisplay.innerHTML = draw;
     roundNumberDisplay.innerHTML = clickCounter;
+
+    // end game support
+    if (clickCounter >= 5) {
+      showModal();
+    }
+
+    function showModal() {
+      const wrapper = document.querySelector(".wrapper");
+      const modal = document.querySelector(".modal");
+
+      if (clickCounter >= 5 && userScore > computerScore) {
+        wrapper.style = "display:none";
+        modal.style = "display:block";
+
+        const showName = localStorage.getItem("name");
+        const newTitle = document.createElement("h1");
+
+        newTitle.innerText = `${showName} wygrałeś !`;
+        newTitle.classList.add("winner__alert");
+        modal.appendChild(newTitle);
+      } else if (clickCounter >= 5 && computerScore > userScore) {
+        wrapper.style = "display:none";
+        modal.style = "display:block";
+        const showName = localStorage.getItem("name");
+        const newTitle = document.createElement("h1");
+
+        newTitle.innerText = `${showName} przegrałeś !`;
+        newTitle.classList.add("lose__alert");
+        modal.appendChild(newTitle); // dodaj dynamicznie klasę w JS zamiast stylować w kodzie JS
+      }
+    }
+  }
+
+  // get and set name from local storage
+
+  if (localStorage.getItem("name") != null) {
+    const userName = localStorage.getItem("name");
+    document.querySelector(".user__name").innerText = userName;
   }
 });

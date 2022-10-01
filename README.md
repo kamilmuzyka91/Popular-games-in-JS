@@ -1,10 +1,17 @@
 # 1. Rock Paper Scissors
 
-Popular simple javascript games - "Rock, papaer, scissors".
+## Classic game of stone, paper, scissors in javascript with pure CSS and use localStorage.
 
-## How to play ?
+### How to play ?
 
-Check out demo page here: [demo](https://popular-games.netlify.app)
+- You choose your weapon, the computer's weapon is drawn and the round result is checked.
+- One game consists of 5 rounds, after which you will be informed about the final result.
+- After the game is over, you can decide whether to play again.
+- Ending the game will close the tab and clear the localStorage.
+
+## Check out demo
+
+Check out demo page here: [https://popular-games.netlify.app](https://popular-games.netlify.app)
 
 ## What's I use ?
 
@@ -19,6 +26,9 @@ Check out demo page here: [demo](https://popular-games.netlify.app)
 ## In the future
 
 - mobile version with RWD
-- write data to Local Storage
 
-![image](./images/jsgame.png)
+## What does the game look like?
+
+![image](./images/jsgame1.png)
+![image](./images/jsgame2.png)
+![image](./images/jsgame3.png)

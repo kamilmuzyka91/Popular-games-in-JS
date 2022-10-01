@@ -1,0 +1,4 @@
+@import "./settings/variables.css";
+@import "./settings/reset.css";
+@import "../fonts/fonts.css";
+@import "./modal.css";

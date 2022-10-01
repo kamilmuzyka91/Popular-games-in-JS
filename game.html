@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular JS games - rock/paper/scissors </title>
+    <script src="https://kit.fontawesome.com/3c638d1622.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/game.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="modal">
+            <p class="modal__ask">Chcesz zagrać jeszcze raz ?</p>
+            <button class="btn-primary">TAK</button>
+            <button class="btn-warning">NIE</button>
+        </div>
+        <div class="wrapper">
+            <div class="game">
+                <div class="box">
+                    <h2 class="box__title">Computer choice: </h2>
+                    <p id="computer-choice" class="box__result"></p>
+                </div>
+                <div class="box">
+                    <h2 class="box__title" data-user>
+                        <span class="user__name"></span> choice: </h2>
+                    <p id="user-choice" class="box__result"></p>
+                </div>
+                <div class="box">
+                    <h2 class="box__title">Score:</h2>
+                    <p id="game-result" class="box__result"></p>
+                </div>
+            </div>
+            <div class="game__result">
+                <div class="box">
+                    <h2 class="box__title">Your score:</h2>
+                    <p id="user-score" class="box__result"></p>
+                </div>
+                <div class="box">
+                    <h2 class="box__title">Computer score:</h2>
+                    <p id="computer-score" class="box__result"> </p>
+                </div>
+                <div class="box">
+                    <h2 class="box__title">Draw: </h2>
+                    <p id="draw" class="box__result">
+                    </p>
+                </div>
+                <div class="box">
+                    <h2 class="box__title">Round number: </h2>
+                    <p id="round" class="box__result"></p>
+                </div>
+            </div>
+            <div class="game__buttons">
+                <button id="rock" class="btn btn--1"></button>
+                <button id="paper" class="btn btn--2"></button>
+                <button id="scissors" class="btn btn--3"></button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <footer><small><a class="footer__link" target="_blank" rel="nofallow" href="https://github.com/kamilmuzyka91">&copy;
+                by Kamil
+                Muzyka - GitHub</small></a></footer>
+    <script src="js/game.js" charset="utf-8"></script>
+    <script src="js/modal.js" charset="utf-8"></script>
+</body>
+
+</html>
