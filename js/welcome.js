@@ -1,6 +1,3 @@
-// to jest strona "wejściowa" więc zmień nazwę dla pliku JS
-// dodaj stylowanie do tej strony otwierającej
-
 let userId = document.querySelector("#name");
 const button = document.querySelector(".button");
 

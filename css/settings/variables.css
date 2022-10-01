@@ -3,3 +3,13 @@
   --secondary-color: #9dc000;
   --wrapper-bg: rgba(0, 0, 0, 0.6);
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "robotoregular";
+  color: var(--primary-color);
+}
