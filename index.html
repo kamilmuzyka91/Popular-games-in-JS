@@ -15,15 +15,25 @@
     <div class="container">
         <div class="wrapper">
             <div class="open_section">
-                <label for="name">Jak się nazywasz ?</label>
+                <label for="name">Jak się nazywasz ?</label> <br>
                 <input type="text" id="name" data-user name="name" placeholder="Imię" required minlength="4"
-                    maxlength="10" size="10">
+                    maxlength="10" size="10"> <br>
                 <button class="button" type="button">START
                 </button>
+
+                <div class="rules">
+                    <h2 class="rules__title">Jakie są zasady gry ?</h2>
+                    <p class="rules__description">
+                        Klasyczna gra w kamień, papier, nożyce.
+                        Wybierasz swoją broń, następuje losowanie broni
+                        komputera i sprawdzenie wyniku rundy.
+                        Jedna gra, składa się z 5 rund, po których otrzymasz informację o wyniku końcowym.
+                        Po zakończonej grze, możesz zdecydować czy grasz jeszcze raz.
+                        Zakońćzenie gry spowoduje zamknięcie karty oraz wyczyszczenie localStorage.
+                    </p>
+                </div>
             </div>
-            Po 5 rundach, otrzymujesz wynik gry
         </div>
-    </div>
     </div>
     <footer><small><a class="footer__link" target="_blank" rel="nofallow" href="https://github.com/kamilmuzyka91">&copy;
                 by Kamil
